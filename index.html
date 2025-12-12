@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Instagram - Présentation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Styles de base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        
+        body {
+            background-color: #fafafa;
+            color: #262626;
+        }
+        
+        /* Header */
+        .presentation-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+        }
+        
+        .presentation-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        /* Navigation */
+        .presentation-nav {
+            background-color: white;
+            border-bottom: 1px solid #dbdbdb;
+            padding: 15px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        
+        .presentation-nav a {
+            color: #262626;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 8px 16px;
+            border-radius: 20px;
+        }
+        
+        .presentation-nav a:hover {
+            background-color: #0095f6;
+            color: white;
+        }
+        
+        /* Contenu principal */
+        .container {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+        
+        /* Interface Instagram */
+        .instagram-demo {
+            background: white;
+            border: 1px solid #dbdbdb;
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 20px 0;
+        }
+        
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            border-bottom: 1px solid #dbdbdb;
+        }
+        
+        .logo {
+            font-family: 'Cookie', cursive;
+            font-size: 28px;
+            color: #262626;
+            text-decoration: none;
+        }
+        
+        .search-bar {
+            padding: 5px 10px;
+            border: 1px solid #dbdbdb;
+            border-radius: 3px;
+            width: 200px;
+        }
+        
+        .nav-icons {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .nav-icons i {
+            font-size: 20px;
+            color: #262626;
+        }
+        
+        /* Stories */
+        .stories-container {
+            padding: 15px;
+            border-bottom: 1px solid #dbdbdb;
+            overflow-x: auto;
+        }
+        
+        .stories {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .story {
+            text-align: center;
+        }
+        
+        .story-img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+            padding: 2px;
+            margin-bottom: 5px;
+        }
+        
+        .story-img img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            border: 2px solid white;
+        }
+        
+        /* Posts */
+        .post {
+            padding: 15px;
+            border-bottom: 1px solid #dbdbdb;
+        }
+        
+        .post-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        
+        .post-user-img {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        
+        .post-actions {
+            display: flex;
+            gap: 10px;
+            margin: 10px 0;
+        }
+        
+        .post-actions i {
+            font-size: 24px;
+            cursor: pointer;
+        }
+        
+        .post-actions .fa-heart.liked {
+            color: #ed4956;
+        }
+        
+        /* Boutons de démo */
+        .demo-controls {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+        
+        .demo-btn {
+            background-color: #0095f6;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        
+        .demo-btn:hover {
+            background-color: #0081d6;
+        }
+        
+        /* Footer */
+        .presentation-footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 10px;
+            }
+            
+            .demo-controls {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .demo-btn {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="presentation-header">
+        <h1>Mini Instagram</h1>
+        <p>Présentation de mon projet de réseau social inspiré d'Instagram</p>
+    </header>
+
+    <nav class="presentation-nav">
+        <a href="#demo">Démonstration</a>
+        <a href="#features">Fonctionnalités</a>
+        <a href="#tech">Technologies</a>
+        <a href="#about">À propos</a>
+    </nav>
+
+    <div class="container">
+        <section id="demo">
+            <h2>Démonstration interactive</h2>
+            <p>Interface Instagram-like avec des fonctionnalités interactives :</p>
+            
+            <div class="instagram-demo">
+                <!-- Barre de navigation -->
+                <div class="navbar">
+                    <a href="#" class="logo">MiniInstagram</a>
+                    <input type="text" class="search-bar" placeholder="Rechercher">
+                    <div class="nav-icons">
+                        <i class="fas fa-home"></i>
+                        <i class="far fa-paper-plane"></i>
+                        <i class="far fa-compass"></i>
+                        <i class="far fa-heart"></i>
+                        <i class="far fa-user"></i>
+                    </div>
+                </div>
+                
+                <!-- Stories -->
+                <div class="stories-container">
+                    <div class="stories" id="storiesContainer">
+                        <!-- Stories seront ajoutées par JavaScript -->
+                    </div>
+                </div>
+                
+                <!-- Posts -->
+                <div id="postsContainer">
+                    <!-- Posts seront ajoutés par JavaScript -->
+                </div>
+            </div>
+            
+            <!-- Contrôles de démonstration -->
+            <div class="demo-controls">
+                <button class="demo-btn" id="addLikeBtn">
+                    <i class="fas fa-heart"></i> Ajouter un like
+                </button>
+                <button class="demo-btn" id="addCommentBtn">
+                    <i class="fas fa-comment"></i> Ajouter un commentaire
+                </button>
+                <button class="demo-btn" id="addPostBtn">
+                    <i class="fas fa-plus"></i> Ajouter un post
+                </button>
+                <button class="demo-btn" id="resetDemoBtn">
+                    <i class="fas fa-redo"></i> Réinitialiser
+                </button>
+            </div>
+        </section>
+        
+        <section id="features" style="margin-top: 40px;">
+            <h2>Fonctionnalités</h2>
+            <ul>
+                <li>Interface utilisateur moderne</li>
+                <li>Système de likes interactif</li>
+                <li>Ajout de commentaires</li>
+                <li>Stories avec avatars</li>
+                <li>Design responsive</li>
+            </ul>
+        </section>
+        
+        <section id="tech" style="margin-top: 40px;">
+            <h2>Technologies utilisées</h2>
+            <p>HTML5, CSS3, JavaScript</p>
+        </section>
+        
+        <section id="about" style="margin-top: 40px;">
+            <h2>À propos</h2>
+            <p>Projet développé dans le cadre de mon apprentissage du développement web.</p>
+        </section>
+    </div>
+
+    <footer class="presentation-footer">
+        <p>Projet Mini Instagram - Présentation de projet étudiant</p>
+        <p>Développé avec HTML, CSS et JavaScript</p>
+    </footer>
+
+    <script>
+        // Données de démonstration
+        const stories = [
+            { username: "vous", img: "https://i.pravatar.cc/100?img=1" },
+            { username: "lucas", img: "https://i.pravatar.cc/100?img=2" },
+            { username: "marie", img: "https://i.pravatar.cc/100?img=3" },
+            { username: "julie", img: "https://i.pravatar.cc/100?img=4" },
+            { username: "pierre", img: "https://i.pravatar.cc/100?img=5" }
+        ];
+
+        let posts = [
+            {
+                id: 1,
+                username: "lucas",
+                userImg: "https://i.pravatar.cc/100?img=2",
+                image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=400&h=300&fit=crop",
+                likes: 42,
+                caption: "Magnifique vue de montagne ! #nature",
+                comments: [
+                    { user: "marie", text: "Waouh, splendide !" }
+                ],
+                liked: false
+            },
+            {
+                id: 2,
+                username: "marie",
+                userImg: "https://i.pravatar.cc/100?img=3",
+                image: "https://images.unsplash.com/photo-1519681393784-d120267933ba?w=400&h=300&fit=crop",
+                likes: 28,
+                caption: "Nouvelle recette de café ☕ #foodie",
+                comments: [
+                    { user: "lucas", text: "Délicieux !" }
+                ],
+                liked: false
+            }
+        ];
+
+        // Initialisation
+        document.addEventListener('DOMContentLoaded', function() {
+            renderStories();
+            renderPosts();
+            setupEventListeners();
+        });
+
+        function renderStories() {
+            const container = document.getElementById('storiesContainer');
+            container.innerHTML = stories.map(story => `
+                <div class="story">
+                    <div class="story-img">
+                        <img src="${story.img}" alt="${story.username}">
+                    </div>
+                    <div>${story.username}</div>
+                </div>
+            `).join('');
+        }
+
+        function renderPosts() {
+            const container = document.getElementById('postsContainer');
+            container.innerHTML = posts.map(post => `
+                <div class="post" data-id="${post.id}">
+                    <div class="post-header">
+                        <img src="${post.userImg}" class="post-user-img" alt="${post.username}">
+                        <strong>${post.username}</strong>
+                    </div>
+                    <img src="${post.image}" style="width:100%; max-height:300px; object-fit:cover;">
+                    <div class="post-actions">
+                        <i class="far fa-heart ${post.liked ? 'liked' : ''}" onclick="toggleLike(${post.id})"></i>
+                        <i class="far fa-comment"></i>
+                        <i class="far fa-paper-plane"></i>
+                    </div>
+                    <div><strong>${post.likes} j'aime</strong></div>
+                    <div><strong>${post.username}</strong> ${post.caption}</div>
+                    <div style="color:#8e8e8e; margin-top:10px;">
+                        Voir les ${post.comments.length} commentaire(s)
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function setupEventListeners() {
+            document.getElementById('addLikeBtn').addEventListener('click', function() {
+                const randomPost = posts[Math.floor(Math.random() * posts.length)];
+                toggleLike(randomPost.id);
+            });
+
+            document.getElementById('addCommentBtn').addEventListener('click', function() {
+                alert('Fonctionnalité de commentaire démontrée !');
+            });
+
+            document.getElementById('addPostBtn').addEventListener('click', function() {
+                const newPost = {
+                    id: posts.length + 1,
+                    username: "vous",
+                    userImg: "https://i.pravatar.cc/100?img=1",
+                    image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=400&h=300&fit=crop",
+                    likes: 0,
+                    caption: "Nouveau post ajouté ! #demo",
+                    comments: [],
+                    liked: false
+                };
+                posts.unshift(newPost);
+                renderPosts();
+                alert('Nouveau post ajouté !');
+            });
+
+            document.getElementById('resetDemoBtn').addEventListener('click', function() {
+                posts = [
+                    {
+                        id: 1,
+                        username: "lucas",
+                        userImg: "https://i.pravatar.cc/100?img=2",
+                        image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=400&h=300&fit=crop",
+                        likes: 42,
+                        caption: "Magnifique vue de montagne ! #nature",
+                        comments: [{ user: "marie", text: "Waouh, splendide !" }],
+                        liked: false
+                    },
+                    {
+                        id: 2,
+                        username: "marie",
+                        userImg: "https://i.pravatar.cc/100?img=3",
+                        image: "https://images.unsplash.com/photo-1519681393784-d120267933ba?w=400&h=300&fit=crop",
+                        likes: 28,
+                        caption: "Nouvelle recette de café ☕ #foodie",
+                        comments: [{ user: "lucas", text: "Délicieux !" }],
+                        liked: false
+                    }
+                ];
+                renderPosts();
+                alert('Démo réinitialisée !');
+            });
+        }
+
+        function toggleLike(postId) {
+            const post = posts.find(p => p.id === postId);
+            if (post) {
+                post.liked = !post.liked;
+                post.likes += post.liked ? 1 : -1;
+                renderPosts();
+            }
+        }
+    </script>
+</body>
+</html>
